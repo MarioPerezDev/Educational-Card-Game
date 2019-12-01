@@ -29,3 +29,113 @@ div.header_wrapper img {
   color: gray;
   margin: 8px;
 }
+
+.card{
+  margin-bottom: 200px;
+  max-width: 300px;
+  max-height: 600px;
+  text-align: center;
+  border: 4px groove #18608F;
+  border-radius: 12px;
+  background-color: #5BD999;
+}
+.card p{
+  text-align: justify;
+  margin:10px;
+  color: white;
+}
+
+.card img{
+  margin:5px;
+  margin-top:0px;
+  margin-bottom:0px;
+  width:278px;
+  border-radius: 3px;
+  border: 1px groove #18608F;
+}
+
+.card-power-text{
+  background-color: #54ba86;
+  margin:10px;
+  margin-top: 5px;
+  border: 2px groove #18608F;
+
+
+}
+.row
+{
+    display: table;
+    height: 60px;
+    width: 100%; /*Optional*/
+     /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+.column
+{
+    display: table-cell;
+    background-color: #54ba86;    vertical-align: middle;
+    padding:8px;
+    border-radius: 3px;
+    border: 1px groove #18608F;
+}
+.row1
+{
+    margin-left: 450px;
+    margin-top: 300px;
+    display: table;
+    border-spacing: 10px; /*Optional*/
+}
+.column1
+{
+    display: table-cell;
+    padding:8px;
+}
+
+
+.card-number{
+font-size: 30px;
+}
+.card-name{
+font-size: 20px;
+}
+.card-power{
+font-size: 30px;
+}
+
+.health{
+  width: 80px;
+  height: 80px;
+}
+
+.playerbar-top{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.playerbar-bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+.playerbar-item{
+  display: table-cell;
+  vertical-align: middle;
+  padding:8px;
+  }
+.modal-90w{
+  width: 80%;
+  max-width: 80%!important;
+}
