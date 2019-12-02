@@ -62,21 +62,19 @@ div.header_wrapper img {
 
 
 }
-.row
-{
+.row{
     display: table;
     height: 60px;
-    width: 100%; /*Optional*/
-     /*Optional*/
-    border-spacing: 10px; /*Optional*/
+    width: 100%;
+    border-spacing: 10px;
 }
 .column
 {
     display: table-cell;
-    background-color: #54ba86;    vertical-align: middle;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
     padding:8px;
-    border-radius: 3px;
-    border: 1px groove #18608F;
 }
 .row1
 {
@@ -136,6 +134,6 @@ font-size: 30px;
   padding:8px;
   }
 .modal-90w{
-  width: 80%;
-  max-width: 80%!important;
+  width: 50%;
+  max-width: 50%!important;
 }
