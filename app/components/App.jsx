@@ -14,7 +14,7 @@ import FinishScreen from './FinishScreen.jsx';
 import Quiz from './Quiz.jsx';
 import Card from './Card.jsx';
 //import PlayerBar from './PlayerBar.jsx';
-import Shop from './Shop.jsx';
+//import Shop from './Shop.jsx';
 
 export class App extends React.Component {
   constructor(props){
@@ -51,7 +51,6 @@ export class App extends React.Component {
   }
     return (
       <div>
-       <Shop/>
       <div id="container">
         <SCORM dispatch={this.props.dispatch} tracking={this.props.tracking} config={GLOBAL_CONFIG}/>
         {appHeader}

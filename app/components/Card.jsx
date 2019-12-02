@@ -1,9 +1,18 @@
 import React from 'react';
 
 export default class Card extends React.Component {
+  constructor(props){
+    super(props);
+  }
   render(){
+    let cardClassName = "card";
+    /*
+    if (algo que se active al hacerle click){
+    cardClassName += " selected"
+  }
+    */
     return (
-      <div className="card">
+      <div className={caddClassName}>
         <div className="card-top row">
             <div id="number" className="card-number column">
             {this.props.number}
