@@ -13,6 +13,7 @@ import Header from './Header.jsx';
 import FinishScreen from './FinishScreen.jsx';
 import Quiz from './Quiz.jsx';
 import Card from './Card.jsx';
+import Game from './Game.jsx';
 //import PlayerBar from './PlayerBar.jsx';
 //import Shop from './Shop.jsx';
 
@@ -23,7 +24,6 @@ export class App extends React.Component {
   }
   render(){
     let appCards = "" ;
-
     let appHeader = "";
     let appContent = "";
 
@@ -43,6 +43,7 @@ export class App extends React.Component {
       );
     }
     if(cards){
+      game = (<Game/>)
     appCards=(
       cards.map((card,i) =>
         <span className="column1" key={i}><Card key={i} number={card.number} name={card.name} power={card.power} image={card.image} powerinfo={card.powerinfo} /></span>
@@ -54,6 +55,7 @@ export class App extends React.Component {
       <div id="container">
         <SCORM dispatch={this.props.dispatch} tracking={this.props.tracking} config={GLOBAL_CONFIG}/>
         {appHeader}
+        {game}
         {appContent}
         <div className="row1">
         {appCards}
