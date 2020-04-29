@@ -3,3 +3,23 @@ div.finish_screen h1 {
   padding: 10%;
   text-align: center;
 }
+
+.finishScreenArea{
+  background-color: lightcyan;
+  padding:10px;
+  margin:10px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.feedbackCardTitle{
+  border-radius: 3px;
+  border: 3px groove black;
+  padding:5px;
+}
+
+.feedbackCardText{
+  border-radius: 3px;
+  border: 3px groove black;
+  padding:10px;
+}

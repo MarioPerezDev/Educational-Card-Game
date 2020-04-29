@@ -25,11 +25,12 @@ export function resetObjectives(){
   };
 }
 
-export function objectiveAccomplished(objectiveId, accomplishedScore = null){
+export function objectiveAccomplished(objectiveId, damage, powerUp){
   return {
     type:'OBJECTIVE_ACCOMPLISHED',
     objective_id:objectiveId,
-    accomplished_score:accomplishedScore,
+    damage,
+    powerUp,
   };
 }
 
@@ -60,5 +61,23 @@ export function finishApp(finished = true){
   return {
     type:'FINISH_APP',
     finished:finished,
+  };
+}
+
+export function playCard(power, index){
+  return {type:'PLAY_CARDS', payload:{power, index}};
+}
+
+export function buy(index){
+  return {type:'BUY', payload:{index}};
+}
+
+export function startGame(){
+  return {type:'START'};
+}
+
+export function next(){
+  return {
+    type:'NEXT',
   };
 }
