@@ -35,6 +35,7 @@ export let LOCALES = {
     "i.delete":"Delete card",
     "i.x2":"Double Points",
     "i.skip":"Skip round",
+    "i.next":"Next one",
     "i.shopWarning":"You have already activated a power up, purchasing another one will replace it.",
     //  Profile and avatar area translations
     "i.attacker":"Attacker",
@@ -78,6 +79,7 @@ export let LOCALES = {
     "i.delete":"Eliminar carta",
     "i.x2":"Puntuar el doble",
     "i.skip":"Saltar ronda",
+    "i.next":"Siguiente",
     "i.shopWarning":"Ya tienes activado un power up. Comprar otro sustituirá al ya activado.",
     //  Traducciones de la zona del avatar y datos de usuario
     "i,attacker":"Atacante",

@@ -175,7 +175,7 @@ const gameSettings = {
         //  Este será el poder de la carta. Si la respuesta que escribe es muy mala deberá tener menor poder que el de la carta enemiga.
         //  Si es la respuesta óptima, deberá tener más poder que la del enemigo.
         //  La tercera carta (e intermedia) puede ser mayor o menor, en función de la respuesta
-        "power":3,
+        "power":2,
         //  Imagen asociada a la carta
         "image":"assets/images/admin.jpg",
         //  Introduzca la respuesta que se asociará a la carta

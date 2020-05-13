@@ -129,7 +129,7 @@ export default class Game extends React.Component {
                       }
                       this.props.dispatch(next());
                     }}>
-                      Siguiente
+                      {this.props.I18n.getTrans("i.next")}
                     </Button>
                   </Col>
                   <Col className="downloadIcon" xs={12} md={6}>

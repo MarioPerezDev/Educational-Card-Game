@@ -19,6 +19,7 @@ export default function gameReducer(state = {}, action){
         newState.powerUp = "none";
       }
       if(newState.health - damageReceived <= 0){
+        newState.health = 0;
         newState.finished = true;
       } else {
         newState.health = newState.health - damageReceived;
@@ -75,11 +76,10 @@ export default function gameReducer(state = {}, action){
     }
     return newState;
   }
-  case 'FINISH_APP':{
+  case 'START':{
     newState = JSON.parse(JSON.stringify(state));
-    newState.finished = true;
-    return newState;
-  }
+    newState.started = true;
+    return newState;}
   default:
     return state;
   }

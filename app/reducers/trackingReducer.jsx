@@ -79,16 +79,6 @@ export default function trackingReducer(state = {}, action){
       newState.objectives[objectiveKeys[i]] = _objective;
     }
     return newState;}
-  case 'FINISH_APP':{
-    newState = JSON.parse(JSON.stringify(state));
-    if([true, false].indexOf(action.finished) !== -1){
-      newState.finished = action.finished;
-    }
-    return newState;}
-  case 'START':{
-    newState = JSON.parse(JSON.stringify(state));
-    newState.started = true;
-    return newState;}
   default:
     return state;
   }

@@ -20,7 +20,7 @@ export class App extends React.Component {
   render(){
     let appContent = "";
 
-    if(!this.props.tracking.started){
+    if(!this.props.game.started){
       appContent = (
         <InitialScreen dispatch={this.props.dispatch} user_profile={this.props.user_profile} tracking={this.props.tracking} config={GLOBAL_CONFIG} I18n={I18n}/>
       );
