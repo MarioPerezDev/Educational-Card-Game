@@ -24,6 +24,7 @@ export let LOCALES = {
     "i.finish_screen_card_anouncer":"Against this card",
     "i.finish_screen_card_played_anouncer":"You played this one",
     "i.finish_screen_text":"Professor comments:",
+    "i.finish_screen_text":"This was the best choice:",
     //  PowerUp shop translations
     "i.shopTitle":"PowerUp Market",
     "i.shopHelp":"You can purchase any power up using the indicated bits",
@@ -68,6 +69,7 @@ export let LOCALES = {
     "i.finish_screen_card_anouncer":"Contra esta carta",
     "i.finish_screen_card_played_anouncer":"Jugaste esta",
     "i.finish_screen_text":"Comentarios del profesor:",
+    "i.finish_screen_text":"Esta era la mejor elección:",
     //  Traducciones de la tienda de powerUps
     "i.shopTitle":"Tienda de poderes",
     "i.shopHelp":"Puedes comprar un power up usando los bits indicados",

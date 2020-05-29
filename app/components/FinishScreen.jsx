@@ -17,6 +17,13 @@ export default class FinishScreen extends React.Component {
     this.setState({currentAnswer:this.state.currentAnswer - 1});
   }
 
+  getBest(roundCards){
+    let powers = roundCards.map((card) => card.power);
+    let index = powers.indexOf(Math.max(...powers));
+    console.log(index);
+    return index;
+  }
+
   _getFinishScreenTitle(progress_measure, score){
     let finishTitleText;
     let hasProgressMeasure = (typeof progress_measure === "number");
@@ -36,6 +43,30 @@ export default class FinishScreen extends React.Component {
   render(){
     let finishTitleText = this._getFinishScreenTitle(this.props.tracking.progress_measure, this.props.tracking.score);
     let chosen = this.props.game.feedback.rounds[this.state.currentAnswer].chosen;
+    let cardChosen = "";
+    let announcer ="";
+    if (chosen === "none"){
+      cardChosen = "No elegiste carta, saltaste la ronda."
+    } else{
+      cardChosen=(
+        <div className="feedbackCard text-justify">
+          <div className="feedbackCardTitle text-center">{this.props.configs.rounds[this.state.currentAnswer].ownCards[chosen - 1].name}</div>
+          <div className="feedbackCardText text-justify">{this.props.configs.rounds[this.state.currentAnswer].ownCards[chosen - 1].powerinfo}</div>
+        </div>
+      )
+    }
+    let cardFeedback = "";
+    if (chosen === "none"){
+      announcer = this.props.I18n.getTrans("i.finish_screen_text_none");
+      cardFeedback = this.props.configs.rounds[this.state.currentAnswer].ownCards[this.getBest(this.props.configs.rounds[this.state.currentAnswer].ownCards)].powerinfo;
+    } else{
+      announcer = this.props.I18n.getTrans("i.finish_screen_text");
+      cardFeedback=(
+        <div>
+        <div>{this.props.configs.rounds[this.state.currentAnswer].ownCards[this.getBest(this.props.configs.rounds[this.state.currentAnswer].ownCards)].feedback}</div>
+      </div>
+      )
+    }
     return (
       <Container >
         <Row>
@@ -55,16 +86,11 @@ export default class FinishScreen extends React.Component {
           </Col>
           <Col xs={4}>
             <h3>{this.props.I18n.getTrans("i.finish_screen_card_played_anouncer")}</h3>
-            <div className="feedbackCard text-justify">
-              <div className="feedbackCardTitle text-center">{this.props.configs.rounds[this.state.currentAnswer].ownCards[chosen - 1].name}</div>
-              <div className="feedbackCardText text-justify">{this.props.configs.rounds[this.state.currentAnswer].ownCards[chosen - 1].powerinfo}</div>
-            </div>
+              {cardChosen}
           </Col>
           <Col xs={4}>
-            <h3>{this.props.I18n.getTrans("i.finish_screen_text")}</h3>
-            <div>
-              <div>{this.props.configs.rounds[this.state.currentAnswer].ownCards[chosen - 1].feedback}</div>
-            </div>
+            <h3>{announcer}</h3>
+            {cardFeedback}
           </Col>
         </Row>
         <Row>

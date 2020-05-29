@@ -63,6 +63,7 @@ export default function gameReducer(state = {}, action){
       newState.score = newState.score / 2;
       newState.powerUp = "skip";
       newState.onHold = true;
+      newState.feedback.rounds[newState.currentRound] = {"chosen":"none"};
       break;
     }
     return newState;

@@ -125,7 +125,7 @@ export default class Game extends React.Component {
                     <p className="money">{this.props.game.money}</p>
                     <Button variant="primary" onClick={() => {
                       if(this.props.game.powerUp === "skip"){
-                        this.props.dispatch(objectiveAccomplished(this.props.objective.id, 0, this.props.game.powerUp));
+                        this.props.dispatch(objectiveAccomplished(objective.id, 0, this.props.game.powerUp));
                       }
                       this.props.dispatch(next());
                     }}>
