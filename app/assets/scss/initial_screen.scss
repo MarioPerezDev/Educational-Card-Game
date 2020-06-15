@@ -1,4 +1,13 @@
+
+body{
+    background-color: black;
+  }
+
+h2{
+    font-size: 30px;
+  }
 .initial_screen{
+    color: red;
     position: absolute; 
     left: 0; 
     right: 0; 
@@ -7,3 +16,18 @@
     width: 100%;
     top: 40%;
 }
+.blinkText h1{
+    font-size: 120px;
+   
+}
+
+.blinkText{
+    animation: blinker 1s linear infinite;
+    color: red;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

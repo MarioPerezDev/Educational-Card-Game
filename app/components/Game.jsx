@@ -156,7 +156,6 @@ export default class Game extends React.Component {
     }
     return (
       <div>
-        Ronda {currentRound + 1}
         <Row className="enemyRow d-flex justify-content-center text-center">
           <Col xs={12} lg={4} xl={2} className="avatarArea">
             <Profile type="enemy" pic={round.enemyPic} name={round.enemyName} I18n={this.props.I18n}/>
